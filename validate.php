@@ -13,9 +13,14 @@ echo "Uw email adres is: "."<b>".$_POST["email"]."</b>"."<br>";
 echo "U bent een: "."<b>".$_POST["geslacht"]."</b>"."<br>";
 echo "Uw opmerkingen zijn: "."<b>".$_POST["opmerking"]."</b>"."<br>";
 echo "<br>"."<br>";
-echo "Zijn deze gegevens juist?";
-
+echo "Bovenstaande gegevens juisten verzenden?";
 ?>
+
+<html>
+<input type="submit" name="Verzenden" value="Verzenden">
+</html>
+
+
 
 </body>
 </html>
