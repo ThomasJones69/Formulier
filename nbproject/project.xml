@@ -5,5 +5,10 @@
         <data xmlns="http://www.netbeans.org/ns/php-project/1">
             <name>Invul Formulier</name>
         </data>
+        <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>Geslacht</word>
+            <word>Gesslact</word>
+            <word>vastgelegt</word>
+        </spellchecker-wordlist>
     </configuration>
 </project>

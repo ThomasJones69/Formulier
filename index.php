@@ -1,26 +1,31 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Registratie</title>
+        
     </head>
     <body>
-        <?php
-        $naam = "";
-        $adres = "";
-        $postcode = "";
-        $woonplaats = "";
-        $email = "";
-        $geslacht = "";
-        $opmerkingen = "";
-        $website="";
+        <h1>Welkom bij de mijn registratie formulier"</h1>
+        <br>
+        <br>
         
-        // Nu het opzetten van het formulier
+<!--        Hier worden de gegevens van de bezoeker vastgelegt en doorgegeven aan validate.php-->
         
-        echo "<h1>Welkom bij de mijn registratie formulier";
-        echo "<br>";
-        echo "<br>";
-        // $naam = $_POST["naam"];
-          
-        ?>
-    </body>
+        <form action="validate.php" method="post">
+        Name            : <input type="text" name="naam"><br>
+        Adres           : <input type="text" name="adres"><br>
+        Postcode        : <input type="text" name="postcode"><br>
+        Woonplaats      : <input type="text" name="woonplaats"><br>
+        Geslacht        : <input type="radio" name="geslacht" value="man">Man
+        <input type="radio" name="geslacht" value="vrouw">Vrouw<br><br>
+        
+        
+        E-mail          : <input type="text" name="email"><br><br>
+        
+        <input type="submit">
+</form>
+    <?php
+    
+    ?>
+</body>
 </html>
