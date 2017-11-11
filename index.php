@@ -5,7 +5,7 @@
 
     </head>
     <body>
-        <h1>Welkom bij de mijn registratie formulier"</h1>
+        <h1>Welkom bij mijn registratie formulier</h1>
         <br>
         <br>
 
