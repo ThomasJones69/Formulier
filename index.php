@@ -18,12 +18,12 @@
         Woonplaats      : <input type="text" name="woonplaats"><br>
         Geslacht        : <input type="radio" name="geslacht" value="man">Man
         <input type="radio" name="geslacht" value="vrouw">Vrouw<br><br>
-        
-        
+                
         E-mail          : <input type="text" name="email"><br><br>
+        Opmerking       : <textarea name="opmerking" rows="5" cols="30"></textarea><br><br>
         
-        <input type="submit">
-</form>
+        <input type="submit" name="Akkoord" value="Akkoord">
+        </form> 
     <?php
     
     ?>
