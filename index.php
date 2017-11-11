@@ -9,22 +9,25 @@
         <br>
         <br>
 
-        <!--        Hier worden de gegevens van de bezoeker vastgelegt en doorgegeven aan validate.php-->
+        <!--        Hier worden de gegevens van de bezoeker vastgelegt-->
 
         <form method="post">
-            Name            : <input type="text" name="naam"><br>
-            Adres           : <input type="text" name="adres"><br>
-            Postcode        : <input type="text" name="postcode"><br>
-            Woonplaats      : <input type="text" name="woonplaats"><br>
-            Geslacht        : <input type="radio" name="geslacht" value="man">Man
+            Naam            : <input type="text" name="naam" placeholder="Uw Naam"/><br>
+            Adres           : <input type="text" name="adres" placeholder="Uw Adres"/><br>
+            Postcode        : <input type="text" name="postcode" placeholder="Uw Postcode/"><br>
+            Woonplaats      : <input type="text" name="woonplaats" placeholder="Uw Woonplaats"/><br>
+            Geslacht        : <input type="radio" name="geslacht" value="man"/>Man
             <input type="radio" name="geslacht" value="vrouw">Vrouw<br><br>
 
-            E-mail          : <input type="text" name="email"><br><br>
-            Opmerking       : <textarea name="opmerking" rows="5" cols="30"></textarea><br><br>
+            E-mail          : <input type="text" name="email" placeholder="Wat is uw E-mail adres"/><br><br>
+            Opmerking       : <textarea name="opmerking" rows="5" cols="30" placeholder="Eventueel opmerkingen"/></textarea><br><br>
             <br>
             <input type="submit" name="Akkoord" value="Akkoord" <?php $id_a = 1 ?>>
         </form> 
         <?php
+        
+        // Function die ervoor zorgt dat de ingevoerde gegevens worden weg geschreven naar bestand
+        
             function submitToFile(){
                 $naamForm = $_POST["naam"];
                 $naamForm = fopen($naamForm."."."txt", "a+") or die("Unable to open file!");
@@ -44,6 +47,8 @@
                 fwrite($naamForm, $f_opmerking);
                 fclose($naamForm);
             }
+            
+        // Als op de submit knop is geklikt kan de invoerder controleren of de gegevens kloppen
         if ($id_a == 1) {
             echo "Uw naam is: " . "<b>" . $_POST["naam"] . "</b>" . "<br>";
             echo "U woont op de: " . "<b>" . $_POST["adres"] . "</b>" . "<br>";
@@ -61,6 +66,9 @@
     </html>
 
     <?php
+    
+        // Als de invoerder vind dat zijn/haar gegevens kloppen en op Akkoord klikt,
+        //  function call naar submitToFile wordt afgetrapt om de gegevens op te slaan.
         if ($id_b == 2){
             submitToFile();
             
